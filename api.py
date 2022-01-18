@@ -7,7 +7,7 @@ api = Api(app)
 
 
 class TextClassification(Resource):
-    def get(self):
+    def post(self):
         try:
             text = request.json['text']
             label, ratio = text_classifier.prediction(text=text)
